@@ -1,0 +1,57 @@
+<%- include("partials/header.ejs") %>
+
+
+<div class="front_container container-fluid px-0">
+    <div class="row mx-0">
+      <div class="col-md-12 px-0">
+        <img src="images/front_page.jpeg" alt="placeholder 960" class="front_img" />
+        <div class="front_centered">
+            <h1 class="title_h1">Welcome to Beyond The Bass</h1>
+            <p class="title_p1">Share the highs, the bass, and the unforgettable moments that make each <br> experience uniquely ours. Where every rail tells its own story
+            </p>
+            <a href="/create" class="title_button btn ">Create a Blog</a>
+        </div>
+      </div>
+     </div>
+  </div>
+
+
+    <div class="second-container container-fluid">
+
+            <div class="row card_row">
+                <% submissions.forEach(submission => { %>
+                    <div class="col-lg-4 px-2 pb-5">
+                        <div class="card card_6" >
+                            <% if (submission.file) { %>
+                                <img class="card_img card-img-top" src="<%= submission.file %>" alt="Uploaded Image">
+                            <% } else { %>
+                                <img class="card-img-top" src="https://via.placeholder.com/150" alt="Default Image">
+                            <% } %>
+                            <div class="card-body">
+                                <p class="text card-text"><%= submission.author %></p>
+                                <p class="card-text"><small class="text">Submitted on: <%= submission.date %></small></p>
+                                <h5 class="text card-title"><%= submission.title %></h5>
+                                <p class="text card-text"><%= submission.story %></p>
+
+                            <div class="card_buttons ">  
+                                <a href="/edit/<%= submission.id %>" class="btn">Edit</a>
+                                <form action="/delete/<%= submission.id %>" method="POST">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn mx-2">Delete</button>
+                                </form>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+
+
+
+        </div>
+    </div>
+
+
+
+    
+</div>
+<%- include("partials/footer.ejs") %>

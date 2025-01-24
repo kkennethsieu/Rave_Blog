@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+
+<div class="create_container container-lg">
+    <div class="row">
+        <div class="col">
+            <h3 class="py-3">Share your awesome experience with us! </h3>
+
+            <form action="/submit" method="POST" enctype="multipart/form-data">
+                <label for="name"></label>
+                <input type="text" placeholder="Author Name" name="name" required>
+
+                <label for="title"></label>
+                <input type="text" placeholder="Title" name="title" required>
+
+                <label for="story"></label>
+                <input type="text" placeholder="Share Your Story" name="story" required>
+
+                <label for="image" >Please choose your front image. </label>
+                <input type="file" name="image" accept="image/*" required>
+                
+                <input type="submit" value="Submit">                
+              </form>
+
+        </div>
+    </div>
+</div>
+
+
+<%- include("partials/footer.ejs") %>

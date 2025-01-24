@@ -1,0 +1,122 @@
+.header_container{
+    background-color: #FA7B7B;
+}
+.nav-pills .nav-link{
+    background-color: transparent;
+    color:white;
+    font-size:18px;
+    letter-spacing: .2px;
+    font-family: "Roboto",serif;
+
+}
+
+.nav-pills .nav-link:hover{
+    background-color: transparent;
+    color:red
+}
+.front_container{
+    position: relative;
+    text-align: center;
+}
+.front_centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+}
+.title_h1{
+    font-size:40px;
+    font-family: "Syncopate",serif;
+    font-weight:700;
+  }
+.title_p1{
+    font-size: 18px;
+    font-family:"Roboto",serif;
+    letter-spacing: .4px;
+}
+
+.title_button{
+    font-family: "Roboto",serif;
+    background-color: #FA7B7B !important;
+    border-color: white !important;
+    color: white !important;
+}
+
+.front_img{
+    width:100%;
+    height: auto ; 
+}
+.second-container{
+    padding-bottom:50px;
+}
+.card_buttons{
+    display: flex;
+}
+.card_row{
+    padding-left: 30px;
+    padding-right:0px;
+    padding-top:50px;
+}
+.card_img{
+    height:400px;
+}
+.card{
+    width:33rem;
+    transition: transform 0.3s ease;
+}
+.card:hover{
+    transform: scale(1.03);
+    z-index:99 !important;
+}
+.card-body{
+    background-color: #FA7B7B;
+}
+.card-title{
+    color:white !important;
+    font-size:25px;
+}
+.btn{
+    background-color: transparent;
+    border-color: white !important;
+    color: white !important;
+}
+.btn:hover{
+    background-color: red !important;
+}
+.text{
+    font-family: "Roboto",serif;
+    color:white
+}
+.create_container{
+    padding-top:50px;
+    height: 76.5vh;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 20px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+input[type=submit] {
+    width: 100%;
+    background-color: #FA7B7B;
+    color: white;
+    padding: 20px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+input[type=file]{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.container_footer{
+    background-color: #FA7B7B;
+}
